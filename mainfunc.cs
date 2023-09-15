@@ -319,7 +319,7 @@ namespace baithucuaanhhuy
                             else
                                 foreach (var item in list)
                                 {
-                                    Console.WriteLine(item.Danhgia);
+                                    Console.WriteLine("ID: " + item.IDRate + "Review: " + item.Danhgia);
                                 }
                             break;
                         }
