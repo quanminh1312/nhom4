@@ -41,7 +41,18 @@ namespace baithucuaanhhuy
                 {
                     await dB_Connect.InsertPhim(item);
                 }
-            }
+
+                List<Rate>? rates = new List<Rate>();
+                using (StreamReader sr = new StreamReader("tb_rate.json"))
+                {
+                    string json = sr.ReadToEnd();
+                    rates = JsonSerializer.Deserialize<List<Rate>>(json);
+                }
+                foreach (var item in rates)
+                {
+                    await dB_Connect.InsertRate(item);
+                }
+                }
             catch (Exception e) { Console.WriteLine(e); }
             int? chucnang = 0;
             do
