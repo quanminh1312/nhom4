@@ -12,6 +12,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.IO;
 namespace baithucuaanhhuy
 {
     internal class Program
@@ -84,6 +85,11 @@ namespace baithucuaanhhuy
                         {   
                             Console.Clear() ;
                             mainfunc.chucnang3(dB_Connect);
+                            break;
+                        }
+                    case 4:
+                        {
+                            Console.Clear();
                             break;
                         }
                     default:
